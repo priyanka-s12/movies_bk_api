@@ -19,7 +19,7 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 initializeDatabase();
-app.get('/', (req, res) => console.log('Hello, express'));
+app.get('/', (req, res) => res.send('Hello, express'));
 
 async function createMovie(newMovie) {
   try {
